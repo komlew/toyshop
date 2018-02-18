@@ -1,0 +1,7 @@
+/dist
+/docs
+/flow-typed
+/node_modules
+/packages/*/dist
+/packages/*/docs
+/packages/*/node_modules

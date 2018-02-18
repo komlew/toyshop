@@ -1,0 +1,95 @@
+{
+  "name": "toyshop",
+  "version": "1.0.0",
+  "description": "This PWA requests and renders a demo JSON",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js -p && cp -R dist/. docs/",
+    "eslint": "eslint *.{js,jsx} --fix",
+    "flow": "flow",
+    "flow-report": "flow-coverage-report -i '/src/**/*.{js,jsx}'",
+    "flow-typed": "flow-typed install && rm -f /flow-typed/npm/styled-components_vx.x.x.js && flow-typed install styled-components@2.0.1",
+    "lint-staged": "lint-staged",
+    "prettier": "prettier --write '*/**/*.{js,jsx}'",
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "test": "jest",
+    "todo": "rm -f TODO.md && (leasot '*.{js,jsx}' -r markdown > TODO.md || true)",
+    "precommit": "lint-staged && flow && (npm run todo && git add TODO.md)",
+    "prepush": "npm test",
+    "preinstall": "rm -f .git/hooks/pre-commit && rm -f .git/hooks/pre-push",
+    "postinstall": "node node_modules/husky/bin/install && npm run flow-typed"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier",
+      "eslint",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komlew/toyshop.git"
+  },
+  "keywords": [
+    "toyshop",
+    "pwa",
+    "api"
+  ],
+  "author": "Alex Komlev",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/komlew/toyshop/issues"
+  },
+  "homepage": "https://komlew.github.io/toyshop/",
+  "dependencies": {
+    "autobind-decorator": "2.1.0",
+    "babel-polyfill": "6.26.0",
+    "classnames": "2.2.5",
+    "lodash": "4.17.5",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-redux": "5.0.7",
+    "react-router-dom": "4.2.2",
+    "redux": "3.7.2",
+    "redux-saga": "0.16.0",
+    "styled-components": "3.1.6"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.2.1",
+    "babel-jest": "22.2.2",
+    "babel-loader": "7.1.2",
+    "babel-plugin-lodash": "3.3.2",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "clean-webpack-plugin": "0.1.18",
+    "eslint": "4.18.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-flowtype": "2.44.0",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-react": "7.6.1",
+    "flow-bin": "0.66.0",
+    "flow-coverage-report": "0.4.1",
+    "flow-typed": "2.3.0",
+    "html-webpack-plugin": "2.30.1",
+    "html-webpack-template": "6.1.0",
+    "husky": "0.14.3",
+    "jest": "22.3.0",
+    "leasot": "4.13.0",
+    "lint-staged": "6.1.1",
+    "prettier": "1.10.2",
+    "progress-bar-webpack-plugin": "1.10.0",
+    "redux-logger": "3.0.6",
+    "webpack": "3.11.0",
+    "webpack-dev-middleware": "2.0.5",
+    "webpack-dev-server": "2.11.1",
+    "webpack-hot-middleware": "2.21.0",
+    "webpack-merge": "4.1.1"
+  }
+}

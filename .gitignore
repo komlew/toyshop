@@ -1,0 +1,8 @@
+/dist
+/flow-typed
+/node_modules
+/packages/*/dist
+/packages/*/node_modules
+.idea
+.DS_*
+*.log

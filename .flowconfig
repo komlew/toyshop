@@ -1,0 +1,23 @@
+[include]
+src
+packages/**/src
+
+[ignore]
+.*/__tests__/.*
+.*/dist/.*
+.*/docs/.*
+.*/flow-typed/.*
+.*/node_modules/.*
+
+[libs]
+
+[lints]
+all=warn
+
+[options]
+include_warnings=true
+module.system.node.resolve_dirname=node_modules
+module.ignore_non_literal_requires=true
+esproposal.decorators=ignore
+suppress_comment= \\(.\\|\n\\)*\\flow-disable-next-line
+suppress_type=$FlowTODO

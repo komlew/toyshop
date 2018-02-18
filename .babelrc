@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "react",
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "IE >= 11"
+        ]
+      },
+      "useBuiltIns": true
+    }]
+  ],
+  "plugins": [
+    "lodash",
+    "syntax-trailing-function-commas",
+    "transform-decorators-legacy",
+    ["transform-object-rest-spread", {
+      "useBuiltIns": true
+    }]
+  ]
+}

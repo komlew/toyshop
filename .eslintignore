@@ -1,0 +1,5 @@
+*.jsx.snap
+/**/dist/**/*
+/**/docs/**/*
+/**/flow-typed/**/*
+/**/node_modules/**/*
