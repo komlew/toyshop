@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { Products } from '../components';
 import { Details } from '../containers';
 import { Navbar } from '../styles';
-import requestProdcuts from '../actions';
+import { requestProdcuts } from '../actions';
 import { selectorIsLoading, selectorProducts } from '../selectors';
 import type { Product, RouterMatch, State } from '../types';
 

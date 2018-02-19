@@ -1,16 +1,15 @@
 // @flow
 import React, { PureComponent } from 'react';
+import autobind from 'autobind-decorator';
 
-import {
-  Gallery,
-  GalleryMainImage,
-  GalleryThumbnails,
-  GalleryThumbnailImage,
-} from '../styles';
+import { Gallery, GalleryMainImage, GalleryThumbnails } from '../styles';
 import type { ProductImage } from '../types';
+
+import DetailsGalleryThumbnail from './DetailsGalleryThumbnail';
 
 type Props = {
   images: Array<ProductImage>,
+  id: number,
 };
 
 type State = {
@@ -25,6 +24,16 @@ class DetailsGallery extends PureComponent<Props, State> {
     };
   }
 
+  componentWillReceiveProps(newProps: Props) {
+    const sameProps = Object.is(this.props, newProps);
+    if (!sameProps) {
+      this.setState({
+        currentImageIndex: 0,
+      });
+    }
+  }
+
+  @autobind
   onClick(index: number) {
     this.setState({
       currentImageIndex: index,
@@ -32,18 +41,19 @@ class DetailsGallery extends PureComponent<Props, State> {
   }
 
   render() {
-    const { images } = this.props;
+    const { images, id } = this.props;
     const currentImageSrc = images[this.state.currentImageIndex].original;
     return (
       <Gallery>
         <GalleryMainImage src={currentImageSrc} alt="" />
         <GalleryThumbnails>
           {this.props.images.map((image, index) => (
-            <GalleryThumbnailImage
-              key={`${image.thumb}${index}`}
+            <DetailsGalleryThumbnail
+              key={`${image.thumb}-${index}-${id}`}
               src={image.thumb}
               active={this.state.currentImageIndex === index}
-              onClick={() => this.onClick(index)}
+              index={index}
+              onClick={this.onClick}
               alt=""
             />
           ))}

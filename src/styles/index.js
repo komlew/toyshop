@@ -1,5 +1,14 @@
 // @flow
 import {
+  CommentForm,
+  CommentLabel,
+  CommentArea,
+  CommentButton,
+  CommentBlock,
+  CommentTime,
+  CommentText,
+} from './comment';
+import {
   DetailsClose,
   DetailsTitle,
   DetailsDescription,
@@ -21,6 +30,13 @@ import {
 } from './overview';
 
 export {
+  CommentForm,
+  CommentLabel,
+  CommentArea,
+  CommentButton,
+  CommentBlock,
+  CommentTime,
+  CommentText,
   DetailsClose,
   DetailsTitle,
   DetailsDescription,

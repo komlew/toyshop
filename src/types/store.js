@@ -7,21 +7,30 @@ export type CreateStore<S, A, D> = (
   enhancer?: StoreEnhancer<S, A, D>,
 ) => Store<S, A, D>;
 
-export type ProductImage = {
-  thumb: string,
-  original: string,
-};
+export type ProductImage = {|
+  +thumb: string,
+  +original: string,
+|};
 
-export type Product = {
-  id: number,
-  title: string,
-  description: string,
-  specification: string,
-  price: number,
-  images: Array<ProductImage>,
-};
+export type Product = {|
+  +id: number,
+  +title: string,
+  +description: string,
+  +specification: string,
+  +price: number,
+  +images: Array<ProductImage>,
+|};
 
-export type State = {
-  loading: boolean,
-  products: Array<Product>,
-};
+export type Comment = {|
+  +id: string,
+  +productID: number,
+  +text: string,
+  +time: number,
+|};
+
+export type State = {|
+  +loading: boolean,
+  +commentsChecked: boolean,
+  +products: Array<Product>,
+  +comments: Array<Comment>,
+|};

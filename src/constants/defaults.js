@@ -12,5 +12,7 @@ export const API = {
 
 export const DEFAULT_STATE: State = {
   loading: true,
+  commentsChecked: false,
   products: [],
+  comments: [],
 };
