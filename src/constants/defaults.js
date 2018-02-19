@@ -7,7 +7,7 @@ export const UNITS = {
 
 export const API = {
   PRODUCTS:
-    'http://private-5815fe-recommendationsknip.apiary-mock.com/products',
+    'https://private-5815fe-recommendationsknip.apiary-mock.com/products',
 };
 
 export const DEFAULT_STATE: State = {
