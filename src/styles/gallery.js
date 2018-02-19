@@ -3,6 +3,14 @@ import styled from 'styled-components';
 
 import { SIZE, STYLE } from '../constants/styles';
 
+type Props = {
+  key: string,
+  src: string,
+  active: boolean,
+  onClick: () => void,
+  alt: string,
+};
+
 export const Gallery = styled.aside`
   width: 50%;
   float: right;
@@ -20,8 +28,10 @@ export const GalleryThumbnails = styled.div`
 export const GalleryThumbnailImage = styled.img`
   width: 23.5%;
   margin: 0 2% 2% 0;
-  box-shadow: ${props => (props.active ? STYLE.SHADOW_BOLD : STYLE.SHADOW)};
-  opacity: ${props => (props.active ? STYLE.OPACITY_BOLD : STYLE.OPACITY)};
+  box-shadow: ${(props: Props) =>
+    props.active ? STYLE.SHADOW_BOLD : STYLE.SHADOW};
+  opacity: ${(props: Props) =>
+    props.active ? STYLE.OPACITY_BOLD : STYLE.OPACITY};
   &:nth-child(4n) {
     margin-right: 0;
   }
