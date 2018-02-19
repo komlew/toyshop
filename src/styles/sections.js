@@ -57,9 +57,18 @@ export const Details = styled.aside`
   overflow: hidden;
   @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
     width: calc(100% - ${SIZE.MARGIN.LIST} * 2);
-    margin: 0 0 ${SIZE.MARGIN.LIST};
+    margin: 0 0 ${SIZE.MARGIN.PAGE};
     position: absolute;
-    box-shadow: ${STYLE.SHADOW_OVERLAY};
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: ${COLOR.OVERLAY};
+      z-index: -1;
+    }
   }
 `;
 
@@ -88,6 +97,7 @@ export const Navbar = styled.section`
     line-height: 1.7em;
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
+    z-index: -1;
     &::before {
       left: ${SIZE.MARGIN.LIST};
     }

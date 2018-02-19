@@ -12,7 +12,7 @@ export const COLOR = {
   },
   BORDER: '#ccc',
   BORDER_BOLD: '#000',
-  OVERLAY: 'rgba(0,0,0,0.4)',
+  OVERLAY: 'rgba(0,0,0,0.6)',
   TEXT: {
     DEFAULT: '#333',
     FOCUSED: '#ccc',
@@ -41,7 +41,6 @@ export const SIZE = {
 export const STYLE = {
   SHADOW: `0 1px 2px ${COLOR.BORDER}`,
   SHADOW_BOLD: `0 1px 2px ${COLOR.BORDER_BOLD}`,
-  SHADOW_OVERLAY: `0 0 0 10000px ${COLOR.OVERLAY}`,
   OPACITY: 1,
   OPACITY_BOLD: 0.25,
   RADIUS: '2px',

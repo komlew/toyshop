@@ -17,6 +17,10 @@ export const CommentArea = styled.textarea.attrs({
 })`
   width: calc(50% - ${SIZE.MARGIN.LIST});
   box-sizing: border-box;
+  border: 1px solid ${COLOR.BORDER};
+  @media screen and (orientation: portrait) {
+    width: 100%;
+  }
 `;
 
 export const CommentButton = styled.input.attrs({
@@ -24,6 +28,10 @@ export const CommentButton = styled.input.attrs({
 })`
   width: calc(50% - ${SIZE.MARGIN.LIST});
   box-sizing: border-box;
+  border: 1px solid ${COLOR.BORDER};
+  @media screen and (orientation: portrait) {
+    width: 100%;
+  }
 `;
 
 export const CommentBlock = styled.dl`
