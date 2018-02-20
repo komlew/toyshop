@@ -25,6 +25,8 @@
  * 
  */
 
+// 25.4.1.5 NewPromiseCapability(C)
+
 /**
  * @copyright 2015, Andrey Popp <8mayday@gmail.com>
  *
@@ -39,8 +41,6 @@
  * }
  * ```
  */
-
-// 25.4.1.5 NewPromiseCapability(C)
 
 /*
 object-assign
@@ -71,7 +71,7 @@ object-assign
  * the same directory.
  */
 
-/** @license React v16.3.0-alpha.1
+/** @license React v16.2.0
  * react.production.min.js
  *
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -80,7 +80,7 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.3.0-alpha.1
+/** @license React v16.2.0
  * react-dom.production.min.js
  *
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -117,6 +117,15 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
+ */
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ * @typechecks
  * 
  */
 
@@ -145,6 +154,14 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
+ */
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
  */
 
 /**

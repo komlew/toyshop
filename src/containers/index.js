@@ -1,6 +1,6 @@
 // @flow
 import Details from './Details';
 import DetailsGallery from './DetailsGallery';
-import Overview from './Overview';
+import MainArea from './MainArea';
 
-export { Details, DetailsGallery, Overview };
+export { Details, DetailsGallery, MainArea };

@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import createStore from './reducers/store';
-import { Overview } from './containers';
+import { MainArea } from './containers';
 import { MainContainer } from './styles';
 
 const store = createStore();
@@ -17,8 +17,8 @@ if (rootAppNode) {
       <MainContainer>
         <HashRouter>
           <Switch>
-            <Route exact path="/product/:productID/" component={Overview} />
-            <Route exact path="/" component={Overview} />
+            <Route exact path="/product/:productID/" component={MainArea} />
+            <Route exact path="/" component={MainArea} />
           </Switch>
         </HashRouter>
       </MainContainer>

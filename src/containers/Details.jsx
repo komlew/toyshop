@@ -60,11 +60,13 @@ class DetailsContainer extends PureComponent<Props> {
   handleSubmit(e: SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.target;
-    if (!(form instanceof HTMLFormElement)) {
+    if (
+      !(form instanceof HTMLFormElement) ||
+      !(form.elements.comment instanceof HTMLTextAreaElement)
+    ) {
       return;
     }
-    const data = new FormData(form);
-    const text = data.get('comment');
+    const text = form.elements.comment.value;
     const productID = this.props.product && this.props.product.id;
     const id = Math.floor((1 + Math.random()) * 0x10000).toString(16);
     const time = Date.now();

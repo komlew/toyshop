@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { COLOR, SIZE } from '../constants/styles';
 
 export const CommentForm = styled.form`
-  margin: ${SIZE.MARGIN.PAGE} 0;
+  margin: ${SIZE.MARGIN.PAGE} 50% ${SIZE.MARGIN.PAGE} 0;
 `;
 
 export const CommentLabel = styled.label`
@@ -15,23 +15,17 @@ export const CommentLabel = styled.label`
 export const CommentArea = styled.textarea.attrs({
   rows: 5,
 })`
-  width: calc(50% - ${SIZE.MARGIN.LIST});
+  width: 100%;
   box-sizing: border-box;
   border: 1px solid ${COLOR.BORDER};
-  @media screen and (orientation: portrait) {
-    width: 100%;
-  }
 `;
 
 export const CommentButton = styled.input.attrs({
   type: 'submit',
 })`
-  width: calc(50% - ${SIZE.MARGIN.LIST});
+  width: 100%;
   box-sizing: border-box;
   border: 1px solid ${COLOR.BORDER};
-  @media screen and (orientation: portrait) {
-    width: 100%;
-  }
 `;
 
 export const CommentBlock = styled.dl`

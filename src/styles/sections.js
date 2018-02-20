@@ -83,6 +83,7 @@ export const Navbar = styled.section`
   text-align: center;
   color: ${COLOR.TEXT.NAVBAR};
   user-select: none;
+  z-index: 1;
   &::before {
     content: '\\2630';
     position: absolute;
