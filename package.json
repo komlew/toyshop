@@ -13,7 +13,7 @@
     "prettier": "prettier --write '*/**/*.{js,jsx}'",
     "start": "webpack-dev-server --config webpack.dev.js",
     "test": "jest --passWithNoTests",
-    "todo": "rm -f TODO.md && (leasot '*.{js,jsx}' -r markdown > TODO.md || true)",
+    "todo": "rm -f TODO.md && (leasot '{*.{js,jsx},!(node*|dist*|flow*)*/**/*.{js,jsx}}' -r markdown > TODO.md || true)",
     "precommit": "lint-staged && flow && (npm run todo && git add TODO.md)",
     "prepush": "npm test",
     "preinstall": "rm -f .git/hooks/pre-commit && rm -f .git/hooks/pre-push",

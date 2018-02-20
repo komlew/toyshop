@@ -3,7 +3,8 @@ import { takeLatest, call } from 'redux-saga/effects';
 
 import { DATA_REQUEST } from '../constants';
 
-import { dataRequest, commentsRequest, commentsPost } from './dataRequest';
+import dataRequest from './dataRequest';
+import { commentsRequest, commentsPost } from './comments';
 
 function* watchAsyncActions(): Generator<*, *, *> {
   yield takeLatest(DATA_REQUEST.PRODUCTS, dataRequest);

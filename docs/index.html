@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="#db5945">
+    <link rel="manifest" href="manifest.json">
     <title>ToyShop PWA</title>
     <style>
       body{margin:0;font:18px/1.2 Helvetica,Arial,sans-serif;background:#f7f8f9;}
@@ -12,6 +16,18 @@
     <div id="root">
       <div style="text-align:center;font-size:1.5rem;line-height:100vh;color:#ccc">Loading...</div>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker
+            .register('service-worker.js')
+            .then(
+              function(registration) {},
+              function(err) {}
+            );
+        });
+      }
+    </script>
     <script src="app.bundle.js"></script>
   </body>
 </html>
