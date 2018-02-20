@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './src/index.jsx'],
+    app: ['babel-polyfill', 'whatwg-fetch', './src/index.jsx'],
   },
   resolve: {
     modules: ['node_modules'],
